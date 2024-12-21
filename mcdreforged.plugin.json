@@ -1,0 +1,25 @@
+{
+	"id": "division",
+	"version": "1.0.0",
+	"name": "Division",
+	"description": {
+		"en_us": "A plugin that supports dividing player into groups & leaving messages for groups / players",
+		"zh_cn": "一个支持将玩家分组&向组/玩家留言的插件"
+	},
+	"author": [
+		"bzyyyyyyyy"
+	],
+	"link": "https://github.com/bzyyyyyyyy/MCDR-Division",
+	"dependencies": {
+		"online_player_api": "*",
+		"player_ip_logger": "*",
+		"mcdreforged": ">=2.1.0"
+	},
+
+	"archive_name": "Division-v{version}",
+	"entrypoint": "division.entry",
+	"resources": [
+		"lang",
+		"LICENSE"
+	]
+}

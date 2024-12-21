@@ -1,0 +1,5 @@
+mcdreforged>=2.1.0
+requests>=2.30.0
+pytz>=2023.3
+redis>=3.5.3
+rejson>=0.5.6

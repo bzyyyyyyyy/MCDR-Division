@@ -1,0 +1,159 @@
+division:
+  help_message: |
+    ------ {1} v{2} ------
+    一个支持将§e玩家§6分组§r&向§6组§r/§e玩家§b留言§r的插件
+    §7{0}§r 显示帮助信息
+    §7{0} search §6<关键字> §a[<可选页号>]§r 搜索组/玩家，返回所有匹配项
+    §7{0} list§a [<可选页号>] §r显示所有组
+    §7{0} ids§a [<可选页号>] §r显示所有玩家
+    §7{0} info §6<组名/玩家名> §r显示组/玩家的信息
+    §7{0} make §6<组名> §d[<可选使用权限>] §e[<可选颜色>] §r创建一个新组
+    §7{0} join §6<组名> §e[<可选玩家名>] §r加入组/让§e玩家§r加入组
+    §7{0} leave §6<组名> §e[<可选玩家名>] §r离开组/让§e玩家§r离开组
+    §7{0} perm §6<组名> §d<使用权限> §r更改组的使用权限
+    §7{0} color §6<组名/玩家名> §d<颜色> §r更改组的颜色
+    §7{0} send §6<组名/玩家名> §b<留言> §r向组/玩家留言
+    §7{0} edit §6<组名/玩家名> §a<行> §b<留言> §r修改组/玩家的第§a<行>§r个留言
+    §7{0} del §6<组名/玩家名> §a<行> §r删除组/玩家的第§a<行>§r个留言
+    §7{0} del §6<组名> §r删除组
+    §7{0} confirm§r 再次确认是否删除组/留言
+    §7{0} place §6<组名> §a<位置> §r更改组的显示位置
+    §7{0} check§a [time/group]§r 查看留给自己的言，可选以日期顺序或以组顺序排列
+    §7{0} §6<关键字> §a[<可选页号>] §r同 §7{0} search
+
+  info:
+    name:
+      group: 组名：
+      player: 玩家名：
+    perm:
+      header: §d权限§r：§d{}
+      hover: 点击更改权限
+    join:
+      header: ">>> §a加入组 §r<<<"
+      hover: 点击加入组
+    leave:
+      header: ">>> §c离开组 §r<<<"
+      hover: 点击离开组
+    join_list:
+      header: ">>> §a加入组名单 §r<<<"
+      hover: 点击加入组名单
+    leave_list:
+      header: ">>> §c离开组名单 §r<<<"
+      hover: 点击离开组名单
+    send:
+      header: ">>> §a留一条言 §r<<<"
+      hover: 点击留一条言
+    group: 点击查看组信息
+    player: 点击查看玩家信息
+    list_players: 点击显示所有玩家
+    latest_online_time: 上次在线时间：
+    show_groups: 参与的组：
+    show_players: 成员：
+
+  msg:
+    text: §b留言§r：
+    delete: 点击删除这行留言
+    edit: 点击编辑这行留言
+    count: 共有§6{}§r条留言
+
+  make_group:
+    exist:
+      player: "{}是一个玩家，无法添加"
+      group: 组{}已存在，无法添加
+    fail: 组{}添加§c失败§r：{}
+    success: 组{}添加§a成功
+
+  del_group:
+    fail: 组{}删除§c失败§r：{}
+    success: 组{}删除§a成功
+
+  perm_group:
+    fail: 修改§d权限§c失败§r：{}
+    success: §a成功§r将组{}的§d权限§r修改为：§d{}
+
+  color_item:
+    fail: 修改颜色§c失败§r：{}
+    success:
+      group: §a成功§r将组{}的颜色修改为：{}
+      player: §a成功§r将玩家{}的颜色修改为：{}
+
+  join_group:
+    exist: 玩家{0}已在组{1}中，无法加入
+    exist_all: 组{}已经是一个全员组
+    fail: 玩家{0}加入组{1}§c失败§r：{2}
+    fail_all: 所有成员加入组{}§c失败§r：{}
+    success: 玩家{0}§a成功§r加入组{1}
+    success_all: 成功将所有成员加入组{}
+    is_all: 组{1}是一个全员组，§a成功§r将玩家{0}加入名单内
+    warn: 组{1}或玩家{0}配置出错，已§a成功§r修复并将玩家{0}加入组{1}
+
+  leave_group:
+    not_exist: 玩家{0}不在组{1}中
+    not_exist_all: 组{}不是一个全员组
+    fail: 玩家{0}离开组{1}§c失败§r：{2}
+    fail_all: 所有成员离开组{}§c失败§r：{}
+    success: 玩家{0}§a成功§r离开组{1}
+    success_all: 成功将所有成员移出组{}
+    is_all_listed: 组{1}是一个全员组，§a成功§r将玩家{0}移出名单
+    is_all_not_listed: 组{1}是一个全员组, 玩家无法离开
+    warn: 组{1}或玩家{0}配置出错，已§a成功§r修复并将玩家{0}移出组{1}
+    warn_all: 组{1}是一个全员组，玩家{0}不在组{1}中, 组{1}或玩家{0}配置出错
+
+  send_msg:
+    fail: 留言§c失败§r：{}
+    success:
+      group: 向组{}留言§a成功
+      player: 向玩家{}留言§a成功
+
+  edit_msg:
+    fail: 留言编辑§c失败§r：{}
+    success:
+      group: §a成功§r编辑组{}中的第§a{}§r行§b留言
+      player: §a成功§r编辑玩家{}中的第§a{}§r行§b留言
+
+  del_msg:
+    fail: 留言删除§c失败§r：{}
+    success:
+      group: §a成功§r删除组{}中的第§a{}§r行§b留言
+      player: §a成功§r删除玩家{}中的第§a{}§r行§b留言
+
+  confirm:
+    need_confirm: 使用§7{0} confirm§r 确认§c删除§r（1分钟内有效）
+    hover: 点击确认
+    nothing_to_confirm: 没有什么需要确认的
+
+  place_group:
+    success: §a成功§r将组{}移至第{}位
+    fail: 组{}移动§c失败§r：{}
+
+  list_item:
+    page_prev:
+      Y: 点击显示上一页
+      N: 已经是第一页了
+    page_next:
+      Y: 点击显示下一页
+      N: 已经是最后一页了
+    change_page: 点击更改页数
+    count:
+      list: 共有§6{}§r个组
+      ids: 共有§6{}§r个玩家
+      search: 共找到§6{}§r个组/玩家
+
+  url: 点击转到网址
+
+  time:
+    yesterday: 昨天
+
+  unknown_command:
+    text: 参数错误！请输入§7{0}§r以获取插件信息
+    hover: 点击查看帮助信息
+  command:
+    permission_denied: 权限不足
+    unknown_group: 未找到组{}
+    unknown_player: 未找到玩家{}
+    unknown_group_or_player: 未找到组/玩家{}
+    not_the_player: 只有玩家{}能执行此操作
+    invalid_color: 颜色格式错误：{}
+  register:
+    summary_help: 将§e玩家§6分组§r&向§6组§r/§e玩家§b留言
+    show_help: 点击查看帮助信息

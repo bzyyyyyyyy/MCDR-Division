@@ -1,0 +1,159 @@
+division:
+  help_message: |
+    ------ {1} v{2} ------
+    A plugin that supports dividing §eplayers §rinto §6groups §r& leaving §bmessages §rfor §6groups§r/§eplayers
+    §7{0}§r Display help message
+    §7{0} search §6<keyword> §a[<page>]§r Search for groups/players. It gives back all items that matches
+    §7{0} list§a [<page>] §rDisplay groups
+    §7{0} ids§a [<page>] §rDisplay players
+    §7{0} info §6<group/player_id> §rDisplay information of the group/player
+    §7{0} make §6<group> §d[<perm>] §e[<color>] §rMake a new group
+    §7{0} join §6<group> §e[<player_id>] §rJoin the group/make §ethe player §rjoin the group
+    §7{0} leave §6<group> §e[<player_id>] §rLeave the group/make §ethe player §rleave the group
+    §7{0} perm §6<group> §d<perm> §rChange the permission level of the group
+    §7{0} perm §6<group> §d<color> §rChange the color of the group
+    §7{0} send §6<group/player_id> §b<msg> §rLeave message for the group/player
+    §7{0} edit §6<group/player_id> §a<lineNo.> §b<msg> §rChange the message at §a<lineNo.> §rof the group/player
+    §7{0} del §6<group/player_id> §a<line> §rDelete the message at §a<lineNo.> §rof the group/player
+    §7{0} del §6<group> §rDelete the group
+    §7{0} confirm§r Use after deleting to confirm the execution
+    §7{0} place §6<group> §a<pos> §rChange the §aposition §rof the group
+    §7{0} check§a [time/group] §rCheck the messages people have left for you, can be in time order or group order
+    §7{0} §6<keyword> §a[<page>] §rSame to §7{0} search
+    
+  info:
+    name:
+      group: "Group name: "
+      player: "Player name: "
+    perm:
+      header: "§dPermission§r: §d{}"
+      hover: Click to change permission
+    join:
+      header: ">>> §ajoin group §r<<<"
+      hover: Click to join goup
+    leave:
+      header: ">>> §cleave group §r<<<"
+      hover: Click to leave group
+    join_list:
+      header: ">>> §ajoin group list §r<<<"
+      hover: Click to join group list
+    leave_list:
+      header: ">>> §cleave group list §r<<<"
+      hover: Click to leave group list
+    send:
+      header: ">>> §aleave a message §r<<<"
+      hover: Click to leave a message
+    group: Click to see info of the group
+    player: Click to see info of the player
+    list_players: Click to show all players
+    latest_online_time: "latest online time: "
+    show_groups: "joined groups: "
+    show_players: "members: "
+
+  msg:
+    text: "§bmessages§r: "
+    delete: Click to delete this message
+    edit: Click to edite this message
+    count: §6{}§r messages
+
+  make_group:
+    exist:
+      player: "{} is a player, unable to make the group"
+      group: "{} already exists, unable to make the group"
+    fail: "§cFailed §rto make group {}: {}"
+    success: Make group {} §asuccessfully
+
+  del_group:
+    fail: "§cFailed §rto delete group {}: {}"
+    success: Delete group {} §asuccessfully
+
+  perm_group:
+    fail: "§cFailed §rto change permission: {}"
+    success: Change permission of group {} §asuccessfully
+
+  color_item:
+    fail:  "§cFailed §rto change color: {}"
+    success:
+      group: Change color of group {} to {} §asuccessfully
+      player: Change color of player {} to {} §asuccessfully
+
+  join_group:
+    exist: Player {0} is already a member of group {1}, unable to join
+    exist_all: Group {} already contains all of the players
+    fail: "§cFailed §rto make player {0} joins the group {1}: {2}"
+    fail_all: "§cFailed §rto make all players join the group {}: {}"
+    success: Player {0} joins the group {1} §asuccessfully
+    success_all: All players joins the group {} §asuccessfully
+    is_all: Group {1} contains all of the players, §asuccessfully listed player {0}
+    warn: There's a problem with the config of group {1} or player {0}, it is fixed and player {0} joins the group {1} §asuccessfully
+
+  leave_group:
+    not_exist: Player {0} is not a member of group {1}
+    not_exist_all: Group {} doesn't contain all of the players
+    fail: "§cFailed §rto make player {0} leaves the group {1}: {2}"
+    fail_all: "§cFailed §rto make all players leave the group {}: {}"
+    success: Player {0} leaves the group {1} §asuccessfully
+    success_all: All players leaves the group {} §asuccessfully
+    is_all_listed: Group {1} contains all of the players, §asuccessfully unlisted player {0}
+    is_all_not_listed: Group {1} contains all of the players, player can't leave the group
+    warn: There's a problem with the config of group {1} or player {0}, it is fixed and player {0} leaves the group {1} §asuccessfully
+    warn_all: Group {1} contains all of the players,and player {0} is not a member of group {1}. There's a problem with the config of group {1} or player {0}
+
+  send_msg:
+    fail: "§cFailed §rto leave message: {}"
+    success:
+      group: Leave message to group {} §asuccessfully
+      player: Leave message to player {} §asuccessfully
+
+  edit_msg:
+    fail: "§cFailed §rto edit message: {}"
+    success:
+      group: Changed the message at group {} line §a{} §asuccessfully
+      player: Changed the message at player {} line §a{} §asuccessfully
+
+  del_msg:
+    fail: "§cFailed §rto delete message: {}"
+    success:
+      group: Deleted the message at group {} line §a{} §asuccessfully
+      player: Deleted the message at player {} line §a{} §asuccessfully
+
+  confirm:
+    need_confirm: use §7{0} confirm§r to confirm the §cdeletion§r (Effective in 1 minute)
+    hover: Click to confirm
+    nothing_to_confirm: Nothing to confirm
+
+  place_group:
+    success: Place the group {} to position {} §asuccessfully
+    fail: "§cFailed §rto place the group: {}"
+
+  list_item:
+    page_prev:
+      Y: Click to show previous page
+      N: Already first page
+    page_next:
+      Y: Click to show next page
+      N: Already last page
+    change_page: Click to change page
+    count:
+      list: §6{}§r groups
+      ids: §6{}§r players
+      search: Find §6{} §rgroups/players
+
+  url: Click to go to the URL
+
+  time:
+    yesterday: YTD
+
+  unknown_command:
+    text: Unknown command, input §7{0}§r for more information
+    hover: Click to see help
+  command:
+    permission_denied: Permission Denied
+    unknown_group: Group {} not found
+    unknown_player: Player {} not found
+    unknown_group_or_player: Group/player {} not found
+    not_the_player: Only the player {} can execute this command
+    invalid_color: Invalid color：{}
+  register:
+    summary_help: Divide §eplayers §rinto §6groups §r& leave §bmessages §rfor §6groups§r/§eplayers
+    show_help: Click to see help

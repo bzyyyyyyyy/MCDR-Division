@@ -1,0 +1,5 @@
+CONFIG_FILE = 'config.json'
+GROUPS_STORAGE_FILE = 'groups.json'
+PLAYERS_STORAGE_FILE = 'players.json'
+PREFIX = '!!div'
+GROUP_OF_ALL = 'All'
