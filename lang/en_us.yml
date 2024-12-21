@@ -11,7 +11,7 @@ division:
     §7{0} join §6<group> §e[<player_id>] §rJoin the group/make §ethe player §rjoin the group
     §7{0} leave §6<group> §e[<player_id>] §rLeave the group/make §ethe player §rleave the group
     §7{0} perm §6<group> §d<perm> §rChange the permission level of the group
-    §7{0} perm §6<group> §d<color> §rChange the color of the group
+    §7{0} color §6<group> §d<color> §rChange the color of the group
     §7{0} send §6<group/player_id> §b<msg> §rLeave message for the group/player
     §7{0} edit §6<group/player_id> §a<lineNo.> §b<msg> §rChange the message at §a<lineNo.> §rof the group/player
     §7{0} del §6<group/player_id> §a<line> §rDelete the message at §a<lineNo.> §rof the group/player
