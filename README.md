@@ -7,11 +7,13 @@
 
 一个支持将玩家分组&向组/玩家留言的插件
 
+## 依赖
+
 需要 `v2.1.0` 以上的 [MCDReforged](https://github.com/Fallen-Breath/MCDReforged)
 
-需要 [OnlinePlayerAPI](https://mcdreforged.com/zh-CN/plugin/online_player_api)
+需要 [OnlinePlayerAPI](https://mcdreforged.com/zh-CN/plugin/online_player_api)，[Player IP Logger](https://mcdreforged.com/zh-CN/plugin/player_ip_logger)
 
-需要 [Player IP Logger](https://mcdreforged.com/zh-CN/plugin/player_ip_logger)
+Python 包要求：见 [requirements.txt](requirements.txt)
 
 ## 命令格式说明
 
