@@ -1,19 +1,17 @@
 ![MCDR-Division](https://socialify.git.ci/bzyyyyyyyy/MCDR-Division/image?description=1&language=1&logo=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F63280128&name=1&owner=1&pattern=Floating+Cogs&theme=Light)
 
-# MCDR-Division
+# MCDR-AutoCommand
 ---------
 
-**中文** | [English](./README_en.md)
+[中文](./README.md) | **English**
 
-一个支持将玩家分组&向组/玩家留言的插件
+A plugin that supports assembling commands into stacks and sending them automatically
 
-需要 `v2.1.0` 以上的 [MCDReforged](https://github.com/Fallen-Breath/MCDReforged)
+Needs `v2.1.0` + [MCDReforged](https://github.com/Fallen-Breath/MCDReforged)
 
-需要 [OnlinePlayerAPI](https://mcdreforged.com/zh-CN/plugin/online_player_api)
+Needs [MinecraftDataAPI](https://github.com/MCDReforged/MinecraftDataAPI/)
 
-需要 [Player IP Logger](https://mcdreforged.com/zh-CN/plugin/player_ip_logger)
-
-## 命令格式说明
+## Command
 
 `!!div` 显示帮助信息
 `!!div search <keyword> [<page>]` 搜索组/玩家，返回所有匹配项
