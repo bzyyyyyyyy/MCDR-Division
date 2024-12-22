@@ -94,7 +94,7 @@ After using `!!div make <group> [<perm>] [<color>]` with out giving `[<color>]` 
 
 Default: `"server"`
 
-The default id for operations from non-players
+The default id for operations from non-players (such as the terminal)
 
 Example: 
 

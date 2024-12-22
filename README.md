@@ -94,7 +94,7 @@ Python 包要求：见 [requirements.txt](requirements.txt)
 
 默认值：`"server"`
 
-非玩家使用插件时默认的 id
+非玩家（如：服务器终端）使用插件时默认的 id
 
 示例：
 
