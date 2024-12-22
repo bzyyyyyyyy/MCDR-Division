@@ -7,6 +7,19 @@
 
 A plugin that supports dividing player into groups & leaving messages for groups / players
 
+## Features
+
+- **Player Grouping**：Supports creating multiple groups. Players can join multiple groups. Supports adding all players to one group in a time.
+- **Leaving Messages**：Players can leave messages to any groups or players. Supports MC color codes. And automatically convert urls into clickable text.
+- **Checking Messages**：The plugin will display all the messages leaved for the player and the groups the player is in, whenever the player logged in.
+- **Multiple storage modes**：The plugin supports using JSON or redis database to store informations of groups, players, and messages.
+- **Sharing Info Between Multiple Servers**：By using redis database, the plugin supports sharing informations of groups, players, and messages between multiple servers.
+- **Permision Setting**：The operations of joining groups, leaving groups, deleting messages or deleting groups would be limited by MCDR permissions. 
+- **Custom Color**：Supports customizing colors of groups and players in the plugin. Can be colors other than 16 MC built-in colors.
+- **Latest Online Time**：The plugin will sort players according to their latest online time, and display them according to this order.
+- **Time Zone Detection**：The plugin will get the time zone of the player based on its ip, and display the time based on the time zone.
+- **Smooth Interaction**：Most actions can be performed by clicking texts
+
 ## Requirements
 
 Needs `v2.1.0` + [MCDReforged](https://github.com/Fallen-Breath/MCDReforged)
