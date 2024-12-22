@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"name": "Division",
 	"description": {
-		"en_us": "A plugin that supports dividing player into groups & leaving messages for groups / players",
-		"zh_cn": "一个支持将玩家分组&向组/玩家留言的插件"
+		"en_us": "Grouping players and leaving messages",
+		"zh_cn": "玩家分组和留言"
 	},
 	"author": [
 		"bzyyyyyyyy"
