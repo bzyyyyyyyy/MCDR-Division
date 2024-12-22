@@ -14,7 +14,7 @@ division:
     §7{0} color §6<group> §d<color> §rChange the color of the group
     §7{0} send §6<group/player_id> §b<msg> §rLeave message for the group/player
     §7{0} edit §6<group/player_id> §a<lineNo.> §b<msg> §rChange the message at §a<lineNo.> §rof the group/player
-    §7{0} del §6<group/player_id> §a<line> §rDelete the message at §a<lineNo.> §rof the group/player
+    §7{0} del §6<group/player_id> §a<lineNo.> §rDelete the message at §a<lineNo.> §rof the group/player
     §7{0} del §6<group> §rDelete the group
     §7{0} confirm§r Use after deleting to confirm the execution
     §7{0} place §6<group> §a<pos> §rChange the §aposition §rof the group
