@@ -9,16 +9,16 @@ A plugin that supports dividing player into groups & leaving messages for groups
 
 ## Features
 
-- **Player Grouping**：Supports creating multiple groups. Players can join multiple groups. Supports adding all players to one group in a time.
-- **Leaving Messages**：Players can leave messages to any groups or players. Supports MC color codes. And automatically convert urls into clickable text.
-- **Checking Messages**：The plugin will display all the messages leaved for the player and the groups the player is in, whenever the player logged in.
-- **Multiple storage modes**：The plugin supports using JSON or redis database to store informations of groups, players, and messages.
-- **Sharing Info Between Multiple Servers**：By using redis database, the plugin supports sharing informations of groups, players, and messages between multiple servers.
-- **Permision Setting**：The operations of joining groups, leaving groups, deleting messages or deleting groups would be limited by MCDR permissions. 
-- **Custom Color**：Supports customizing colors of groups and players in the plugin. Can be colors other than 16 MC built-in colors.
-- **Latest Online Time**：The plugin will sort players according to their latest online time, and display them according to this order.
-- **Time Zone Detection**：The plugin will get the time zone of the player based on its ip, and display the time based on the time zone.
-- **Smooth Interaction**：Most actions can be performed by clicking texts
+- **Player Grouping**: Supports creating multiple groups. Players can join multiple groups. Supports adding all players to one group in a time.
+- **Leaving Messages**: Players can leave messages to any groups or players. Supports MC [color codes](https://minecraft.wiki/w/Formatting_codes). And automatically convert urls into clickable text.
+- **Checking Messages**: The plugin will display all the messages leaved for the player and the groups the player is in, whenever the player joins the server.
+- **Multiple storage modes**: The plugin supports using JSON or [Redis](https://redis.io/) to store informations of groups, players, and messages.
+- **Sharing Info Between Multiple Servers**: By using [Redis](https://redis.io/), the plugin supports sharing informations of groups, players, and messages between multiple servers.
+- **Permision Setting**: The operations of joining groups, leaving groups, deleting messages or deleting groups would be limited by MCDR permissions. 
+- **Custom Color**: Supports customizing colors of groups and players in the plugin. Can be colors other than 16 MC built-in colors.
+- **Latest Online Time**: The plugin will sort players according to their latest online time, and display them according to this order.
+- **Time Zone Detection**: The plugin will get the time zone of the player based on its ip, and display the time based on the time zone.
+- **Smooth Interaction**: Most actions can be performed by clicking texts
 
 ## Requirements
 
@@ -65,3 +65,116 @@ Python package requirements: See [requirements.txt](requirements.txt)
 `!!div check [time/group]` Check the messages people have left for you, can be in time order or group order
 
 `!!div <keyword> [<page>]` Same to `!!div search`
+
+## Config file explaination
+
+Path: `config/division/config.json`
+
+#### item_per_page
+
+Default: `10`
+
+After using `!!div list <page>` ,  `!!div list <page>` or `!!div search <keyword> <page>`
+
+the limit of items showing on each page
+
+#### default_perm
+
+Default: `1`
+
+After using `!!div make <group> [<perm>] [<color>]` with out giving `[<perm>]` , the default permission entered
+
+#### default_color
+
+Default: `"white"`
+
+After using `!!div make <group> [<perm>] [<color>]` with out giving `[<color>]` , the default color entered
+
+#### default_sender
+
+Default: `"server"`
+
+The default id for operations from non-players
+
+Example: 
+
+1. When a non-player useing `!!div send <group/player_id> <msg>` , the plugin will store `server` as the sender
+
+2. When a non-player useing `!!div join <group>` , the plugin will make `server` join the group
+
+3. When a non-player useing `!!div check [time/group]` , the plugin will display messages left for `server`
+
+#### default_check_mode
+
+Default: `"time"`
+
+After a player joins the server, or using `!!div check` , the default order of displaying messages
+
+| Value | Explanation |
+|----|------|
+| `time` | Display messages in time order first |
+| `group` | Display messages in group order first |
+
+
+#### perm_to_modify_all
+
+Default: `1`
+
+The permission of using `!!div join <group> All` or `!!div leave <group> All`
+
+#### msg_for_new_player
+
+Default: `""`
+
+The message leaved for new players by the plugin 
+
+#### redis_ip
+
+Default: `""`
+
+Ip of the Redis server
+
+If it's not `""` , then use Redis to store informations of groups, players, and messages (Example: `"127.0.0.1"` )
+
+If it's `""` then use JSON to store informations of groups, players, and messages
+
+#### redis_port
+
+Default: `6379`
+
+Port of the Redis server
+
+#### redis_db
+
+Default: `1`
+
+Index of the database of the Redis server
+
+#### redis_password
+
+Default: `""`
+
+Password of the Redis server
+
+## Color Format
+
+Here are the values you can enter for the parameter `<color>` : 
+
+- [MC color](https://minecraft.wiki/w/Formatting_codes) (Example: `white` ,  `black`)
+- RGB code (Example: `00AAFF` ,  `0x00AAFF` ,  `#00AAFF`)
+
+## Escape Character
+
+Cause players cannot type the symbol `§` in MC which made them cannot use the color code
+
+This plugin offers `$` as an escape character
+
+When a player uses `$` when leaving a message, the plugin automatically converts it to the symbol `§`
+
+When the player needs to enter the symbol `$`, enter `$$`
+
+## URL Convert
+
+The plugin will recognize anything that starts with `http` and ends with a space as a URL
+
+And convert it to clickable text
